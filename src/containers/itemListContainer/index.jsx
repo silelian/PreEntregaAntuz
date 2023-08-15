@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 import style from './style.module.css'
 
 // creo el componente
-const ItemListConatainer = () => {
+const ItemListConatainer = ({saludo}) => {
     // aqui va la logica de cada componente
     //creo el array de objetos
     //uso estados usesState, el array va estar vacio porq no se agrego nada al array
@@ -33,6 +33,7 @@ const deleteItem = (nombre) =>{
         <div>
              {/* voy a empezar a dar el alta los productos a traves de un input */}
              {/* input recibe el valor de input */}
+             <h1 className={style['item-h1']}>{saludo}</h1>
                 <input value = {input} onChange={(event) => setInput(event.target.value)} />
                 <Button onClick={addItem}as="input" type="reset" value="Guardar" className={style['btnguardar']} />    
                 {/* <button onClick={addItem}>Guardar</button> */}
@@ -45,7 +46,8 @@ const deleteItem = (nombre) =>{
                     {listaDeCompras.map(producto => <Item nombre = {producto} deleteItem = {deleteItem}/>)}
                 </>
             ) : (
-                <p className={style['item-p']}> Lista vacia </p>
+                 <p className={style['item-p']}>Lista vacia </p>
+                
             )
             
             }

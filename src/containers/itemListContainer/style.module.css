@@ -1,10 +1,17 @@
 .btnguardar{
     margin-left: 1rem;
     margin-top: -0.6rem;
+    /* margin-top: -115px */
 }
 
 .item-p{
     color:black;
     margin-left: -6rem;
     margin-top: 1rem;
+}
+.item-h1{
+    color:black;
+    margin-left: -6rem;
+    /* margin-top: 1rem; */
+    margin-bottom: 250px;
 }
